@@ -1,0 +1,26 @@
+.setups {
+  padding: 2rem 0;
+}
+
+.setups h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.setups .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.setups .card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 300px;
+  min-width: 300px;
+}

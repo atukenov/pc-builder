@@ -1,0 +1,12 @@
+.contact {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.contact .whatsapp {
+  padding: 0.5rem 1rem;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

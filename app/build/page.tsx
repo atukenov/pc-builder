@@ -59,7 +59,6 @@ const BuildPage: React.FC = () => {
   }, [parts]);
 
   const filterParts = (type: string, compatibility?: number) => {
-    console.log(parts);
     return parts.filter(
       (part) =>
         part.type === type &&

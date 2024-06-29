@@ -1,12 +1,50 @@
 .contact {
   text-align: center;
   margin: 2rem 0;
+  padding: 0 2rem;
+}
+
+.contact h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.contact p {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .contact .whatsapp {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background-color: #25d366;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact .whatsapp:hover {
+  background-color: #1ebf57;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .contact {
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .contact .whatsapp {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
 }

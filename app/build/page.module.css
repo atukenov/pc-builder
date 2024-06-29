@@ -37,3 +37,27 @@
 .submit:hover {
   background-color: #005bb5;
 }
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .submit {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .fieldLabel {
+    font-size: 1rem;
+  }
+
+  .fieldSelect {
+    padding: 0.5rem;
+  }
+
+  .submit {
+    font-size: 1rem;
+  }
+}

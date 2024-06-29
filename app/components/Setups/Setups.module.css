@@ -22,5 +22,31 @@
 
 .card img {
   max-width: 300px;
-  min-width: 300px;
+  height: auto;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .setups .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .setups .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setups h2 {
+    font-size: 1.5rem;
+  }
+
+  .setups .card {
+    padding: 0.5rem;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
 }

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
 import styles from "./page.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import BuildForm from "./BuildForm/BuildForm";
 
 const partsInit: Part[] = [
   { id: 1, name: "Case A", type: "case", imageUrl: "/images/pc1.jpg" },
@@ -86,7 +87,8 @@ const BuildPage: React.FC = () => {
   return (
     <div className={styles.container}>
       <h1>Build Your PC</h1>
-      <Formik
+      <BuildForm />
+      {/* <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
@@ -188,7 +190,7 @@ const BuildPage: React.FC = () => {
             </button>
           </Form>
         )}
-      </Formik>
+      </Formik> */}
     </div>
   );
 };

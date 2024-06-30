@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Setups from "./components/Setups/Setups";
 import Contact from "./components/Contact/Contact";
@@ -40,7 +40,7 @@ const setups = [
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Header />
+      <Navbar />
       <Hero />
       <Setups items={setups} />
       <Contact />

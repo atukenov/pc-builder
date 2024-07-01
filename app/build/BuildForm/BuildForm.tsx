@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./BuildForm.module.css";
 import Link from "next/link";
-import Button from "@/app/components/Button/Button";
+import Button from "@/components/Button/Button";
 
 const PCParts = [
   {

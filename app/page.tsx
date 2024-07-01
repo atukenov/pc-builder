@@ -1,9 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import Setups from "@/components/Setups/Setups";
-import Contact from "@/components/Contact/Contact";
 
 const setups = [
   {
@@ -40,10 +38,8 @@ const setups = [
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Navbar />
       <Hero />
       <Setups items={setups} />
-      <Contact />
     </div>
   );
 }

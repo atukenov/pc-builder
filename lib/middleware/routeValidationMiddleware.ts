@@ -18,9 +18,9 @@ export function routeValidationMiddleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const type = pathname.split("/")[2];
 
-  if (!validTypes.includes(type)) {
-    return NextResponse.redirect(new URL("/404", request.url));
-  }
+  // if (!validTypes.includes(type)) {
+  //   return NextResponse.redirect(new URL("/404", request.url));
+  // }
 
   return NextResponse.next();
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
+import { getTypeData } from "@/lib/api/getTypeData";
+import { IComponent } from "@/app/models/Component";
 
 interface Props {
   params: {
@@ -7,11 +9,17 @@ interface Props {
   };
 }
 
-const page: React.FC<Props> = ({ params }) => {
+const page: React.FC<Props> = async ({ params }) => {
   const { type } = params;
+  const list = await getTypeData(type);
+  let { components } = list;
   return (
     <div className={styles.types}>
       <h1>Choose a {type.toLocaleUpperCase()}</h1>
+      {components &&
+        components.map((item: IComponent) => {
+          return <div key={item.id}>{item.price}</div>;
+        })}
     </div>
   );
 };

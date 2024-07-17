@@ -30,8 +30,8 @@ export const Error = (
   status: number = 500
 ) => {
   if (typeof arg2 == "number")
-    return new NextResponse(message, { status: arg2 });
+    return NextResponse.json(message, { status: arg2 });
   if (typeof arg2 != "number")
-    return new NextResponse(message + " " + arg2.message, { status: status });
-  return new NextResponse(message, { status: 500 });
+    return NextResponse.json(message + " " + arg2.message, { status: status });
+  return NextResponse.json(message, { status: 500 });
 };

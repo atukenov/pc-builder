@@ -2,7 +2,6 @@ import { routeValidationMiddleware } from "@/lib/middleware/routeValidationMiddl
 import { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  console.log("here");
   return routeValidationMiddleware(request);
 }
 

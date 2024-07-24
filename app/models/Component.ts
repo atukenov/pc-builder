@@ -82,8 +82,8 @@ const CPUDetailsSchema: Schema = new Schema({
 });
 
 export const CPUDetailsModel =
-  mongoose.models.CPUDetails ||
-  mongoose.model<ICPUDetails>("CPUDetails", CPUDetailsSchema);
+  mongoose.models.CPUDetail ||
+  mongoose.model<ICPUDetails>("CPUDetail", CPUDetailsSchema);
 
 //---------------------------------------------------------------------------
 
@@ -112,8 +112,8 @@ const CPUCoolerDetailsSchema: Schema = new Schema({
 });
 
 export const CPUCoolerDetailsModel =
-  mongoose.models.CPUCoolerDetails ||
-  mongoose.model<ICPUDetails>("CPUCoolerDetails", CPUCoolerDetailsSchema);
+  mongoose.models.CPUCoolerDetail ||
+  mongoose.model<ICPUDetails>("CPUCoolerDetail", CPUCoolerDetailsSchema);
 //---------------------------------------------------------------------------
 
 export interface IMotherboardDetails extends Document {
@@ -143,9 +143,9 @@ const MotherboardDetailsSchema: Schema = new Schema({
 });
 
 export const MotherboardDetailsModel =
-  mongoose.models.MotherboardDetails ||
+  mongoose.models.MotherboardDetail ||
   mongoose.model<IMotherboardDetails>(
-    "MotherboardDetails",
+    "MotherboardDetail",
     MotherboardDetailsSchema
   );
 //---------------------------------------------------------------------------
@@ -177,8 +177,8 @@ const MemoryDetailsSchema: Schema = new Schema({
 });
 
 export const MemoryDetailsModel =
-  mongoose.models.MemoryDetails ||
-  mongoose.model<IMemoryDetails>("MemoryDetails", MemoryDetailsSchema);
+  mongoose.models.MemoryDetail ||
+  mongoose.model<IMemoryDetails>("MemoryDetail", MemoryDetailsSchema);
 //---------------------------------------------------------------------------
 
 export interface IStorageDetails extends Document {
@@ -206,8 +206,8 @@ const StorageDetailsSchema: Schema = new Schema({
 });
 
 export const StorageDetailsModel =
-  mongoose.models.StorageDetails ||
-  mongoose.model<IStorageDetails>("StorageDetails", StorageDetailsSchema);
+  mongoose.models.StorageDetail ||
+  mongoose.model<IStorageDetails>("StorageDetail", StorageDetailsSchema);
 
 //---------------------------------------------------------------------------
 
@@ -240,8 +240,8 @@ const VideoCardDetailsSchema: Schema = new Schema({
 });
 
 export const VideoCardDetailsModel =
-  mongoose.models.VideoCardDetails ||
-  mongoose.model<IVideoCardDetails>("VideoCardDetails", VideoCardDetailsSchema);
+  mongoose.models.VideoCardDetail ||
+  mongoose.model<IVideoCardDetails>("VideoCardDetail", VideoCardDetailsSchema);
 
 //---------------------------------------------------------------------------
 
@@ -266,8 +266,8 @@ const CaseDetailsSchema: Schema = new Schema({
 });
 
 export const CaseDetailsModel =
-  mongoose.models.CaseDetails ||
-  mongoose.model<ICaseDetails>("CaseDetails", CaseDetailsSchema);
+  mongoose.models.CaseDetail ||
+  mongoose.model<ICaseDetails>("CaseDetail", CaseDetailsSchema);
 
 //---------------------------------------------------------------------------
 
@@ -288,8 +288,8 @@ const OperatingSystemDetailsSchema: Schema = new Schema({
 });
 
 export const OperatingSystemDetailsModel =
-  mongoose.models.OperatingSystemDetails ||
+  mongoose.models.OperatingSystemDetail ||
   mongoose.model<ICaseDetails>(
-    "OperatingSystemDetails",
+    "OperatingSystemDetail",
     OperatingSystemDetailsSchema
   );

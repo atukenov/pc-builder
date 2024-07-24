@@ -1,4 +1,4 @@
-import { ComponentModel, IComponent } from "@/app/models/Component";
+import { CPUDetailsModel, MemoryDetailsModel } from "@/app/models/Component";
 import { connectToDatabase } from "@/lib/db";
 import { Error } from "@/lib/middleware/errorHandler";
 import { NextApiRequest } from "next";
@@ -16,9 +16,20 @@ export const GET = async (req: NextRequest, { params }: IDProps) => {
   try {
     await connectToDatabase();
     let typeLow = type.toLowerCase();
-    const components = await ComponentModel.find({ type: typeLow });
-    console.log(components);
-    return NextResponse.json({ components }, { status: 200 });
+    let data;
+    switch (typeLow) {
+      case "cpu":
+        data = await CPUDetailsModel.find().populate("component_id");
+        break;
+      case "memory":
+        data = await MemoryDetailsModel.find().populate("component_id");
+        break;
+      default:
+        throw Error("No such type: " + type);
+    }
+    // const components = await ComponentModel.find({ type: typeLow });
+    // console.log(components);
+    return NextResponse.json({ data }, { status: 200 });
   } catch (error: any) {
     return Error("Error in fetching components of type: " + type, error);
   }
